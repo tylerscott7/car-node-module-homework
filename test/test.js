@@ -21,12 +21,14 @@ describe('a new car', ()=>{
     it('should be able to accelerate by a given amount', ()=>{
         machFive.accelerate(25);
         machFive.speed.should.be.eql(25);
+        machFive.accelerate(10);
+        machFive.speed.should.be.eql(35);
         jalopy.accelerate(5);
         jalopy.speed.should.be.eql(5);
     })
     it('should be able to decelerate by a given amount', ()=>{
         machFive.decelerate(10);
-        machFive.speed.should.be.eql(15);
+        machFive.speed.should.be.eql(25);
         jalopy.decelerate(5);
         jalopy.speed.should.be.eql(0);
     })
